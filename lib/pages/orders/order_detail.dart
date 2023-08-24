@@ -168,9 +168,9 @@ String namedropdownvalue='Ahmad';
                   //   ],
                   //  ),
                   //  SizedBox(height: 15,),
-                   Text('Orders informations',style: TextStyle(fontSize: 18,),),
+                   Text('Orders informations',style: TextStyle(fontSize: 18,fontFamily: 'MOntB'),),
                    SizedBox(height: 40,),
-                   Text('Branch Name:  Jabria Branch',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5)),),
+                   Text('Branch Name:  Jabria Branch',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5),fontFamily: 'Tt-nr'),),
                    SizedBox(height: 20,),
                    Divider(
                     thickness: 2,
@@ -200,7 +200,7 @@ String namedropdownvalue='Ahmad';
                   //  ),
                   //  ),
                    SizedBox(height: 20,),
-                   Text('Order Amount: 80 KD',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5)),),
+                   Text('Order Amount: 80 KD',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5),fontFamily: 'Tt-nr'),),
                    SizedBox(height: 20,),
                    Divider(
                     thickness: 2,
@@ -230,7 +230,7 @@ String namedropdownvalue='Ahmad';
                   //  ),
                   //  ),
                    SizedBox(height: 20,),
-                   Text('Customer Name: Amer Amer',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5)),),
+                   Text('Customer Name: Amer Amer',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5),fontFamily: 'Tt-nr'),),
                    SizedBox(height: 20,),
                    Divider(
                     thickness: 2,
@@ -260,7 +260,7 @@ String namedropdownvalue='Ahmad';
                   //  ),
                   //  ),
                    SizedBox(height: 20,),
-                   Text('Customer Number: 11221122',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5)),),
+                   Text('Customer Number: 11221122',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5),fontFamily: 'Tt-nr'),),
                    SizedBox(height: 20,),
                    Divider(
                     thickness: 2,
@@ -290,7 +290,7 @@ String namedropdownvalue='Ahmad';
                   //  ),
                   //  ),
                    SizedBox(height: 20,),
-                   Text('Customer Location: Map Link',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5)),),
+                   Text('Customer Location: Map Link',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5),fontFamily: 'Tt-nr'),),
                    SizedBox(height: 20,),
                    Divider(
                     thickness: 2,
@@ -320,7 +320,7 @@ String namedropdownvalue='Ahmad';
                   //  ),
                   //  ),
                    SizedBox(height: 20,),
-                   Text('Order Date / Time: 17-9-2020 / 7:20 PM',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5)),),
+                   Text('Order Date / Time: 17-9-2020 / 7:20 PM',style: TextStyle(fontSize: 15,color: Color(0xffA5A5A5),fontFamily: 'Tt-nr'),),
                    SizedBox(height: 20,),
                   //  SizedBox(height: 10,),
                   //  TextFormField(
@@ -352,25 +352,25 @@ String namedropdownvalue='Ahmad';
                   //       ),
                   //       ),
                   //  ),
-                      Padding(
-                        padding: EdgeInsets.only(left: 30,right: 30,top: 80),
-                        child: SizedBox(
-                    height: 50,
-                    width: double.infinity,
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0,
-                          primary: Color(0xff00B83A),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
-                        ),
-                        onPressed: (){}, 
-                        child: Text('View PDF',style: TextStyle(fontSize: 18,color: Colors.white,),
-                        ),
-                        ),
-                        ),
-                      ),
+                    //   Padding(
+                    //     padding: EdgeInsets.only(left: 30,right: 30,top: 80),
+                    //     child: SizedBox(
+                    // height: 50,
+                    // width: double.infinity,
+                    // child: ElevatedButton(
+                    //     style: ElevatedButton.styleFrom(
+                    //       elevation: 0,
+                    //       primary: Color(0xff00B83A),
+                    //       shape: RoundedRectangleBorder(
+                    //         borderRadius: BorderRadius.circular(30),
+                    //       ),
+                    //     ),
+                    //     onPressed: (){}, 
+                    //     child: Text('View PDF',style: TextStyle(fontSize: 18,color: Colors.white,),
+                    //     ),
+                    //     ),
+                    //     ),
+                    //   ),
                   ],
                 ),
               ),

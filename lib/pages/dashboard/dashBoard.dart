@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rent_a_car/pages/orders/orders.dart';
-import 'package:rent_a_car/pages/profile/profile.dart';
 import 'package:rent_a_car/pages/home/homeScreen.dart';
-import 'package:rent_a_car/pages/dashboard/notices.dart';
+
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -39,7 +37,7 @@ class _DashboardState extends State<Dashboard> {
           floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
           bottomNavigationBar: BottomAppBar(
             shape: CircularNotchedRectangle(),
-            notchMargin: 10,
+            notchMargin: 7,
             child: Container(
               height: 50,
               child: Row(
@@ -54,8 +52,7 @@ class _DashboardState extends State<Dashboard> {
                           setState(() {
                             currentScreen=HomeScreen();
                             currentTab =0; 
-                          });
-                          
+                          });   
                         }
                         ),
                         child: Column(

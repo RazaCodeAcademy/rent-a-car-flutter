@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text(
                           'DASHBOARD',
                           style:
-                              TextStyle(fontSize: 18, color: Color(0xff00B83A)),
+                              TextStyle(fontSize: 18,fontFamily: 'Arial', color: Color(0xff00B83A),fontWeight: FontWeight.bold),
                         ),
                         Container(
                           height: 40,
@@ -67,25 +67,22 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: Text(
                               'ع',
                               style:
-                                  TextStyle(fontSize: 20, color: Colors.white),
+                                  TextStyle(fontSize: 20, color: Colors.white,fontFamily: 'Arial',fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),
                       ],
                     ),
                   ),
-                  SizedBox(
-                    height: size.height * 0.01,
-                  ),
                   Expanded(
                     child: GridView.builder(
                       primary: false,
+                      physics: BouncingScrollPhysics(),
                       padding: EdgeInsets.only(
                           left: 15, right: 15, top: 15, bottom: 15),
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
-                        mainAxisSpacing: 10,
+                        mainAxisSpacing: 15,
                         crossAxisSpacing: 10,
                         childAspectRatio: 1,
                         mainAxisExtent: 100,
@@ -127,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       Text(
                                         homepagemodeldata[index].title,
                                         style: TextStyle(
-                                            fontSize: 15, color: Colors.white),
+                                            fontSize: 15,fontFamily: 'MontM', color: Colors.white),
                                       ),
                                     ],
                                   ),
@@ -161,68 +158,69 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            SizedBox(
-              height: size.height * 0.01,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 15),
-              child: Text(
-                'Reports',
-                style: TextStyle(fontSize: 20, color: Color(0xff00B83A)),
-              ),
-            ),
-            SizedBox(
-              height: size.height *0.018,
-            ),
-            Padding(
-              padding: EdgeInsets.only(left: 15, right: 15),
-              child: Container(
-                height: 100,
-                child: GridView.builder(
-                  scrollDirection: Axis.horizontal,
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 1,
-                    crossAxisSpacing: 5,
-                    mainAxisSpacing: 12,
-                    childAspectRatio: 1,
-                    mainAxisExtent: 102,
-                  ),
-                  itemCount: 3,
-                  itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                    height: size.height * 0.15,
-                    width: size.width * 0.27,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xffF5F5F5),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SvgPicture.asset(
-                          'assets/images/reservation.svg',
-                          height: 30,
-                          width: 30,
-                        ),
-                        Text(
-                          'Vendor',
-                          style: TextStyle(fontSize: 15),
-                        ),
-                        Text(
-                          'Statement',
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      ],
-                    ),
-                  );
-                  },
-                ),
-                ),
+            // SizedBox(
+            //   height: size.height * 0.01,
+            // ),
+            // Padding(
+            //   padding: EdgeInsets.only(left: 15),
+            //   child: Text(
+            //     'Reports',
+            //     style: TextStyle(fontSize: 20, color: Color(0xff00B83A)),
+            //   ),
+            // ),
+            // SizedBox(
+            //   height: size.height *0.018,
+            // ),
+            // Padding(
+            //   padding: EdgeInsets.only(left: 15, right: 15),
+            //   child: Container(
+            //     height: 100,
+            //     child: GridView.builder(
+            //       scrollDirection: Axis.horizontal,
+            //       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            //         crossAxisCount: 1,
+            //         crossAxisSpacing: 5,
+            //         mainAxisSpacing: 12,
+            //         childAspectRatio: 1,
+            //         mainAxisExtent: 102,
+            //       ),
+            //       itemCount: 3,
+            //       itemBuilder: (BuildContext context, int index) {
+            //         return Container(
+            //         height: size.height * 0.15,
+            //         width: size.width * 0.27,
+            //         decoration: BoxDecoration(
+            //           borderRadius: BorderRadius.circular(10),
+            //           color: Color(0xffF5F5F5),
+            //         ),
+            //         child: Column(
+            //           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            //           children: [
+            //             SvgPicture.asset(
+            //               'assets/images/reservation.svg',
+            //               height: 30,
+            //               width: 30,
+            //             ),
+            //             Text(
+            //               'Vendor',
+            //               style: TextStyle(fontSize: 15),
+            //             ),
+            //             Text(
+            //               'Statement',
+            //               style: TextStyle(fontSize: 15),
+            //             ),
+            //           ],
+            //         ),
+            //       );
+            //       },
+            //     ),
+            //     ),
             
-            ),
-            SizedBox(
-              height: size.height * 0.02,
-            ),
+            // ),
+            // SizedBox(
+            //   height: size.height * 0.02,
+            // ),
+            SizedBox(height: 160,),
             Container(
               height: size.height * 0.223,
               width: size.width,
@@ -237,9 +235,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Text(
                       'Branch Status',
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           color: Colors.white,
-                          fontWeight: FontWeight.bold),
+                          fontFamily: 'MontS',fontWeight: FontWeight.bold),
                     ),
                   ),
                   SizedBox(
@@ -262,22 +260,22 @@ class _HomeScreenState extends State<HomeScreen> {
                           style: TextStyle(
                               fontSize: 15,
                               color: Colors.white,
-                              fontWeight: FontWeight.bold),
+                              fontFamily: 'MontS',fontWeight: FontWeight.bold),
                         ),
                         Container(
                           height: 40,
                           width: 120,
                           decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 193, 243, 137)
-                                .withOpacity(0.2),
+                            color: Colors.white.withOpacity(0.3),
                             borderRadius: BorderRadius.circular(50),
                           ),
                           child: Center(
                               child: Text(
                             'Closed',
                             style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 color: Colors.white,
+                                fontFamily: 'MontS',
                                 fontWeight: FontWeight.bold,
                                 ),
                           )),

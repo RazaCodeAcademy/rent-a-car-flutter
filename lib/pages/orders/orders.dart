@@ -27,7 +27,7 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
 }
   @override
   Widget build(BuildContext context) {
-    TabController _tabController=TabController(length: 2, vsync: this);
+    // TabController _tabController=TabController(length: 2, vsync: this);
     var size=MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
@@ -105,7 +105,7 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                     Navigator.pop(context);
                     }, icon: Icon(Icons.arrow_back,color: Colors.white,),
                     ),
-                  Text('Orders',style: TextStyle(fontSize: 20,color: Colors.white),),
+                  Text('Orders',style: TextStyle(fontSize: 20,color: Colors.white,),),
                   IconButton(onPressed: (){}, icon: Icon(Icons.search,color: Colors.white,)),
                 ],
               ),
@@ -123,7 +123,7 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                     padding: EdgeInsets.only(left: 15,right: 10),
                     child: DropdownButtonHideUnderline(
                       child: DropdownButton(
-                        style: TextStyle(fontSize: 15,color: Colors.white),
+                        style: TextStyle(fontSize: 15,color: Colors.white,fontFamily: 'MontB'),
                         dropdownColor: Color(0xff00C444),
                         icon: Icon(Icons.keyboard_arrow_down,color: Colors.white,),
                         iconSize: 30,
@@ -263,18 +263,18 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                         Container(
                           height: 20,
                           width: 100,
-                          child: Text(ordermodeldata[index].title,style: TextStyle(fontSize:15,color: Colors.white),)),
+                          child: Text(ordermodeldata[index].title,style: TextStyle(fontSize:12,color: Colors.white,fontFamily: 'MontS',fontWeight: FontWeight.bold),)),
                       ],
                     ),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 80,),
+                  padding: EdgeInsets.only(left: 80),
                   child: Container(
                     height: 20,
                     width: 20,
                     decoration: BoxDecoration(
-                      color: Colors.amber.shade500,
+                      color: Color(0xffEAA015),
                       borderRadius: BorderRadius.circular(100),
                     ),
                     child: Center(child: Text('1',style: TextStyle(fontSize: 12,color: Colors.white,fontWeight: FontWeight.bold),)),
@@ -289,10 +289,11 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
         Expanded(
           child:ListView.builder(
             padding: EdgeInsets.zero,
+            physics: BouncingScrollPhysics(),
             itemCount: 4,
             itemBuilder: (BuildContext context, int index) {
               return Container(
-                height: 130,
+                height: 120,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color:index%2==0 ? Colors.white: Color(0xffEAEAEA),
@@ -307,6 +308,7 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                 child: Padding(
                   padding:EdgeInsets.only(left: 16,right: 20),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Padding(
@@ -314,11 +316,12 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Name: Amer Amer',style: TextStyle(fontSize: 18,color: Color(0xff00971E)),),
-                            Text('Salmiyah Branch',style: TextStyle(fontSize: 14,color: Color(0xff052B0D)),),
-                            Text('Number: 12345678',style: TextStyle(fontSize: 14,color: Color(0xff052B0D)),),
-                            Text('18-7-2020 -  7:43 PM',style: TextStyle(fontSize: 14,color: Color(0xff052B0D)),),
+                            Text('Name: Amer Amer',style: TextStyle(fontSize: 15,color: Color(0xff00971E),fontFamily: 'MontB'),),
+                            Text('Salmiyah Branch',style: TextStyle(fontSize: 12,color: Color(0xff052B0D),fontFamily: 'MontS'),),
+                            Text('Number: 12345678',style: TextStyle(fontSize: 12,color: Color(0xff052B0D),fontFamily: 'MontS'),),
+                            Text('18-7-2020 -  7:43 PM',style: TextStyle(fontSize: 12,color: Color(0xff052B0D),fontFamily: 'MontS'),),
                            Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Image.asset('assets/images/knet.png',height: 20,width: 30,),
                               Image.asset('assets/images/truck.png',height: 20,width: 30,),
@@ -326,16 +329,16 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                            ),
                            Row(
                             children: [
-                              Icon(Icons.timer_sharp,color: Color(0xff1BB83A),size: 15,),
+                              Icon(Icons.timer_sharp,color: Color(0xff1BB83A),size: 12  ,),
                               SizedBox(width: 5,),
-                              Text('29-7-2020 -  4:00 PM',style: TextStyle(fontSize: 14,color: Color(0xff052B0D)))
+                              Text('29-7-2020 -  4:00 PM',style: TextStyle(fontSize: 12,color: Color(0xff052B0D),fontFamily: 'MontM'))
                             ],
                            ),
                           ],
                         ),    
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 15),
+                        padding: EdgeInsets.only(top: 14),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
@@ -344,20 +347,20 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
                                 Navigator.push(context, MaterialPageRoute(builder: ((context) => OrderDetail())));
                               },
                               child: Container(
-                                height: 40,
-                                width: 130,
+                                height: 35,
+                                width: 100,
                                 decoration: BoxDecoration(
                                   color: Color(0xff0F9E2D),
                                   borderRadius: BorderRadius.circular(30)
                                 ),
-                                child: Center(child: Text('View',style: TextStyle(fontSize: 15,color: Colors.white),)),
+                                child: Center(child: Text('View',style: TextStyle(fontSize: 15,color: Colors.white,fontFamily: 'Montb'),)),
                             
                               ),
                             ),
                             SizedBox(height: 5,),
-                            Text('Pending',style: TextStyle(fontSize: 15,color: Color(0xff052B0D)),),
-                            SizedBox(height: 8,),
-                            Text('80 KD',style: TextStyle(fontSize: 18,color: Color(0xff052B0D),fontWeight: FontWeight.bold),),
+                            Text('Pending',style: TextStyle(fontSize: 15,color: Color(0xff052B0D),fontFamily: 'MontS'),),
+                            SizedBox(height: 5,),
+                            Text('80 KD',style: TextStyle(fontSize: 15,color: Color(0xff052B0D),fontFamily: 'MontB'),),
                           ],
                         ),
                       ),
@@ -370,7 +373,6 @@ class _OrdersState extends State<Orders> with TickerProviderStateMixin {
           ),
         ],
        )
-      //  Center(child: Text('Accounts screen')),
     );
   }
 }

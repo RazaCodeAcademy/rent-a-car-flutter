@@ -24,7 +24,7 @@ class _VehicalsState extends State<Vehicals> {
             bottom: Radius.circular(30),
           ),
         ),
-        title: Text('Vehicals',style: TextStyle(fontSize: 20),),
+        title: Text('Vehicals',style: TextStyle(fontSize: 20,fontFamily: 'MontB'),),
         actions: [
           IconButton(onPressed: (){}, icon: Icon(Icons.search)),
         ],
@@ -35,9 +35,9 @@ class _VehicalsState extends State<Vehicals> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Choose a Car',style: TextStyle(fontSize: 20,color: Color(0xff00B83A)),),
+            Text('Choose a Car',style: TextStyle(fontSize: 20,color: Color(0xff00B83A),fontFamily: 'MontB'),),
             SizedBox(height: size.height*0.030),
-            Text('Brand',style: TextStyle(fontSize: 18),),
+            Text('Brand',style: TextStyle(fontSize: 18,fontFamily: 'MontM'),),
             SizedBox(height: size.height*0.020,),
             Container(
               height: 60,
@@ -55,6 +55,7 @@ class _VehicalsState extends State<Vehicals> {
                   mainAxisExtent: 60,
                 ),
                 itemCount: 8, 
+                physics: BouncingScrollPhysics(),
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
                     width: 30,
@@ -73,13 +74,14 @@ class _VehicalsState extends State<Vehicals> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Avaliable Cars',style: TextStyle(fontSize: 18),),
+                Text('Avaliable Cars',style: TextStyle(fontSize: 18,fontFamily: 'MontM'),),
                  Icon(Icons.filter_alt_outlined,color: Colors.black,),
               ],
             ),
           Expanded(
             child: ListView.builder(
               itemCount: 3,
+              physics: BouncingScrollPhysics(),
               itemBuilder: (BuildContext context, int index) {
                 return Container(
                   margin: EdgeInsets.only(top: 20),
@@ -106,8 +108,8 @@ class _VehicalsState extends State<Vehicals> {
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  Text('BMW',style: TextStyle(fontSize: 18),),
-                                  Text('2015',style: TextStyle(fontSize: 15),),
+                                  Text('BMW',style: TextStyle(fontSize: 18,fontFamily: 'MontS'),),
+                                  Text('2015',style: TextStyle(fontSize: 15,fontFamily: 'MontS'),),
                                 ],
                               ),
                           ],
@@ -118,7 +120,7 @@ class _VehicalsState extends State<Vehicals> {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text("\$180/day",),
+                            Text("\$180/day",style: TextStyle(fontSize: 15,fontFamily: 'MontM'),),
                             Container(
                               height: 40,
                               width: 150,
@@ -126,7 +128,7 @@ class _VehicalsState extends State<Vehicals> {
                                color: Color(0xff00B83A),
                                borderRadius: BorderRadius.only(topLeft: Radius.circular(20,),bottomRight: Radius.circular(20)),
                               ),
-                              child: Center(child: Text('Details',style: TextStyle(fontSize: 18,color: Colors.white),)),
+                              child: Center(child: Text('Details',style: TextStyle(fontSize: 18,color: Colors.white,fontFamily: 'MontB'),)),
                             ),
                           ],
                         ),

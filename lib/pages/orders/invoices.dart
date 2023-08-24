@@ -12,6 +12,7 @@ class _InvociesState extends State<Invocies> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Padding(
           padding:EdgeInsets.only(top: 20),
           child: Column(

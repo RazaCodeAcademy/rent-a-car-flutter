@@ -26,49 +26,50 @@ class _ReservationsState extends State<Reservations> {
       ),
       body: SingleChildScrollView(
         primary: false,
+        physics: BouncingScrollPhysics(),
         child: Padding(
           padding: EdgeInsets.only(left: 20,right: 20,top: 20,bottom: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Reservation Details',style: TextStyle(fontSize: 20,color: Color(0xff00B83A)),),
+              Text('Reservation Details',style: TextStyle(fontSize: 18,color: Color(0xff00B83A),fontFamily: 'MontB'),),
               SizedBox(height: 10,),
-              Text('Name: Amer amer',style: TextStyle(fontSize: 15),),
-              SizedBox(height: 10,),
-              Divider(
-                color: Colors.black,
-              ),
-      
-              SizedBox(height: 10,),
-              Text('Phone: +92334455666',style: TextStyle(fontSize: 15),),
+              Text('Name: Amer amer',style: TextStyle(fontSize: 15,fontFamily: 'MontM'),),
               SizedBox(height: 10,),
               Divider(
                 color: Colors.black,
               ),
       
-               SizedBox(height: 10,),
-              Text('Email: amerali234@gmail.com',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade),),
+              SizedBox(height: 10,),
+              Text('Phone: +92334455666',style: TextStyle(fontSize: 15,fontFamily: 'MontM'),),
               SizedBox(height: 10,),
               Divider(
                 color: Colors.black,
               ),
       
                SizedBox(height: 10,),
-              Text('City: Lahore',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade),),
+              Text('Email: amerali234@gmail.com',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
+              SizedBox(height: 10,),
+              Divider(
+                color: Colors.black,
+              ),
+      
+               SizedBox(height: 10,),
+              Text('City: Lahore',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
               SizedBox(height: 10,),
               Divider(
                 color: Colors.black,
               ),
       
                 SizedBox(height: 10,),
-              Text('Vehicle Type: Honda',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade),),
+              Text('Vehicle Type: Honda',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
               SizedBox(height: 10,),
               Divider(
                 color: Colors.black,
               ),
       
                 SizedBox(height: 10,),
-              Text('Vehicle Model: Type first',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade),),
+              Text('Vehicle Model: Type first',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
               SizedBox(height: 10,),
               Divider(
                 color: Colors.black,
@@ -76,14 +77,14 @@ class _ReservationsState extends State<Reservations> {
       
               
                 SizedBox(height: 10,),
-              Text('Date Out: 20/7/2023',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade),),
+              Text('Date Out: 20/7/2023',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
               SizedBox(height: 10,),
               Divider(
                 color: Colors.black,
               ),
       
                SizedBox(height: 10,),
-              Text('Return Date: 24/7/2023',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade),),
+              Text('Return Date: 24/7/2023',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
               SizedBox(height: 10,),
               Divider(
                 color: Colors.black,
@@ -94,7 +95,7 @@ class _ReservationsState extends State<Reservations> {
                 children: [
                   Icon(Icons.check_outlined,size: 18,),
                   SizedBox(width: 5,),
-                  Text('No Hidden Charges',style: TextStyle(fontSize: 15),),
+                  Text('No Hidden Charges',style: TextStyle(fontSize: 15,fontFamily: 'MontM'),),
                 ],
               ),
               SizedBox(height: 20,),
@@ -102,7 +103,7 @@ class _ReservationsState extends State<Reservations> {
                 children: [
                   Icon(Icons.check_outlined,size: 18,),
                   SizedBox(width: 5,),
-                  Text('Low Price Guaranteed',style: TextStyle(fontSize: 15),),
+                  Text('Low Price Guaranteed',style: TextStyle(fontSize: 15,fontFamily: 'MontM'),),
                 ],
               ),
               SizedBox(height: 20,),
@@ -110,7 +111,7 @@ class _ReservationsState extends State<Reservations> {
                 children: [
                   Icon(Icons.check_outlined,size: 18,),
                   SizedBox(width: 5,),
-                  Text('24/7 Support',style: TextStyle(fontSize: 15),),
+                  Text('24/7 Support',style: TextStyle(fontSize: 15,fontFamily: 'MontM'),),
                 ],
               ),
 
@@ -129,7 +130,7 @@ class _ReservationsState extends State<Reservations> {
                           ),
                         ),
                         onPressed: (){}, 
-                        child: Text('Get Reservation',style: TextStyle(fontSize: 18,color: Colors.white,),
+                        child: Text('Get Reservation',style: TextStyle(fontSize: 18,color: Colors.white,fontFamily: 'MontB'),
                         ),
                         ),
                         ),
