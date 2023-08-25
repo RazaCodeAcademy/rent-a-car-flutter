@@ -53,7 +53,7 @@ class _CustomersPageState extends State<CustomersPage> {
                           height: 80,
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color:index%2==0 ? Colors.white: Color(0xffEAEAEA),
                             boxShadow: [
                               BoxShadow(
                                 color: Colors.grey,
