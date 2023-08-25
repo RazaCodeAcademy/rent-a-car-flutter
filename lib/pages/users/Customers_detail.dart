@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rent_a_car/pages/vehicles/reservations.dart';
 
 class CustomersDetail extends StatefulWidget {
   CustomersDetail({Key? key}) : super(key: key);
@@ -127,6 +128,28 @@ class _CustomersDetailState extends State<CustomersDetail> {
                   Divider(
                     color: Colors.grey,
                   ),
+                  SizedBox(height: 20,),
+                   SizedBox(
+                              height: 50,
+                              width: double.infinity,
+                              child: ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  primary: Color(0xff0F9E2D),
+                                  shape: RoundedRectangleBorder(
+                                    //to set border radius to button
+                                    borderRadius: BorderRadius.circular(30),
+                                  ),
+                                ),
+                                onPressed: () {
+                                  Navigator.push(context, MaterialPageRoute(builder: ((context) => ReservationsScreen())));
+                                },
+                                child: Text(
+                                        'Check Reservation',
+                                        style: TextStyle(
+                                            fontSize: 18, color: Colors.white,fontFamily: 'MontB',),
+                                      ),
+                              ),
+                            ),
           ],
         ),
       ),

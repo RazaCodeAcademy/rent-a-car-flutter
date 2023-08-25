@@ -6,6 +6,7 @@ import 'package:rent_a_car/models/homepage_model.dart';
 import 'package:rent_a_car/pages/orders/invoices.dart';
 import 'package:rent_a_car/pages/orders/orders.dart';
 import 'package:rent_a_car/pages/vehicles/reservations.dart';
+import 'package:rent_a_car/pages/vehicles/reservations_detail.dart';
 import 'package:rent_a_car/pages/vehicles/vehicles.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -18,11 +19,12 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List pages=[
     CustomersPage(),
-    Reservations(),
-    Vehicals(),
-    Orders(),
-    Invocies(),
     Employes(),
+    ReservationsScreen(),
+    Orders(),
+    Vehicals(),
+    Invocies(),
+    
   ];
   @override
   Widget build(BuildContext context) {
@@ -87,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         childAspectRatio: 1,
                         mainAxisExtent: 100,
                       ),
-                      itemCount: 6,
+                      itemCount: pages.length,
                       itemBuilder: (BuildContext context, int index) {
                         return InkWell(
                           onTap: () {

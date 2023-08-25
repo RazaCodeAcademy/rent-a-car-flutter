@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:rent_a_car/pages/vehicles/reservations_detail.dart';
 
-class Reservations extends StatefulWidget {
-  const Reservations({super.key});
+class ReservationsScreen extends StatefulWidget {
+  const ReservationsScreen({super.key});
 
   @override
-  State<Reservations> createState() => _ReservationsState();
+  State<ReservationsScreen> createState() => _ReservationsScreenState();
 }
 
-class _ReservationsState extends State<Reservations> {
+class _ReservationsScreenState extends State<ReservationsScreen> {
   @override
   Widget build(BuildContext context) {
     var size=MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
+       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
         toolbarHeight: size.height*0.15,
@@ -22,122 +23,108 @@ class _ReservationsState extends State<Reservations> {
             bottom: Radius.circular(30),
           ),
         ),
-        title: Text('Reservation',style: TextStyle(fontSize: 20),),
+        title: Text('Reservations',style: TextStyle(fontSize: 20),),
       ),
-      body: SingleChildScrollView(
-        primary: false,
-        physics: BouncingScrollPhysics(),
-        child: Padding(
-          padding: EdgeInsets.only(left: 20,right: 20,top: 20,bottom: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('Reservation Details',style: TextStyle(fontSize: 18,color: Color(0xff00B83A),fontFamily: 'MontB'),),
-              SizedBox(height: 10,),
-              Text('Name: Amer amer',style: TextStyle(fontSize: 15,fontFamily: 'MontM'),),
-              SizedBox(height: 10,),
-              Divider(
-                color: Colors.black,
-              ),
-      
-              SizedBox(height: 10,),
-              Text('Phone: +92334455666',style: TextStyle(fontSize: 15,fontFamily: 'MontM'),),
-              SizedBox(height: 10,),
-              Divider(
-                color: Colors.black,
-              ),
-      
-               SizedBox(height: 10,),
-              Text('Email: amerali234@gmail.com',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
-              SizedBox(height: 10,),
-              Divider(
-                color: Colors.black,
-              ),
-      
-               SizedBox(height: 10,),
-              Text('City: Lahore',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
-              SizedBox(height: 10,),
-              Divider(
-                color: Colors.black,
-              ),
-      
-                SizedBox(height: 10,),
-              Text('Vehicle Type: Honda',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
-              SizedBox(height: 10,),
-              Divider(
-                color: Colors.black,
-              ),
-      
-                SizedBox(height: 10,),
-              Text('Vehicle Model: Type first',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
-              SizedBox(height: 10,),
-              Divider(
-                color: Colors.black,
-              ),
-      
-              
-                SizedBox(height: 10,),
-              Text('Date Out: 20/7/2023',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
-              SizedBox(height: 10,),
-              Divider(
-                color: Colors.black,
-              ),
-      
-               SizedBox(height: 10,),
-              Text('Return Date: 24/7/2023',style: TextStyle(fontSize: 15,overflow: TextOverflow.fade,fontFamily: 'MontM'),),
-              SizedBox(height: 10,),
-              Divider(
-                color: Colors.black,
-              ),
-
-              SizedBox(height: 20,),
-              Row(
-                children: [
-                  Icon(Icons.check_outlined,size: 18,),
-                  SizedBox(width: 5,),
-                  Text('No Hidden Charges',style: TextStyle(fontSize: 15,fontFamily: 'MontM'),),
-                ],
-              ),
-              SizedBox(height: 20,),
-              Row(
-                children: [
-                  Icon(Icons.check_outlined,size: 18,),
-                  SizedBox(width: 5,),
-                  Text('Low Price Guaranteed',style: TextStyle(fontSize: 15,fontFamily: 'MontM'),),
-                ],
-              ),
-              SizedBox(height: 20,),
-              Row(
-                children: [
-                  Icon(Icons.check_outlined,size: 18,),
-                  SizedBox(width: 5,),
-                  Text('24/7 Support',style: TextStyle(fontSize: 15,fontFamily: 'MontM'),),
-                ],
-              ),
-
-              SizedBox(height: 20,),
-               Padding(
-                        padding: EdgeInsets.only(left: 10,right: 10,top: 30),
-                        child: SizedBox(
-                    height: 50,
-                    width: double.infinity,
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          elevation: 0,
-                          primary: Color(0xff00B83A),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              itemCount: 5,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: EdgeInsets.only(left: 10, right: 10, top: 10),
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 80,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius: 2,
+                              blurRadius: 2,
+                            ),
+                          ],
                         ),
-                        onPressed: (){}, 
-                        child: Text('Get Reservation',style: TextStyle(fontSize: 18,color: Colors.white,fontFamily: 'MontB'),
-                        ),
-                        ),
+                        child: Padding(
+                    padding:EdgeInsets.only(left: 16,right: 20,),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                      Padding(
+                        padding: EdgeInsets.only(top: 10,bottom: 8,),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              height: 20,
+                              width: 150,
+                              child: Text('Id: 87654467777777777',style: TextStyle(fontSize: 15,color: Color(0xff00971E),overflow: TextOverflow.clip, fontFamily: 'MontB'),)),
+                            Container(
+                              height: 20,
+                              width: 150,
+                              child: Text('Customer: Amer Amer',style: TextStyle(fontSize: 12,color: Color(0xff052B0D),overflow: TextOverflow.clip, fontFamily: 'MontS'),)),
+                            Container(
+                               height: 20,
+                              width: 150,
+                              child: Text('Amount: 60 KD',style: TextStyle(fontSize: 12,color: Color(0xff052B0D),overflow: TextOverflow.clip, fontFamily: 'MontS'),)),
+                          //   Container(
+                          //       height: 20,
+                          //     width: 150,
+                          //     child: Text('Paid: 3948',style: TextStyle(fontSize: 12,color: Color(0xff052B0D),overflow: TextOverflow.clip, fontFamily: 'MontS'),)),
+                          //   Container(
+                          //     height: 20,
+                          //     width: 150,
+                          //      child: Text('Remaining: 1948',style: TextStyle(fontSize: 12,color: Color(0xff052B0D),overflow: TextOverflow.clip, fontFamily: 'MontS'),),
+                          //   ),
+                          // Container(
+                          //     height: 20,
+                          //     width: 150,
+                          //      child: Text('Plate No: 1948',style: TextStyle(fontSize: 12,color: Color(0xff052B0D),overflow: TextOverflow.clip, fontFamily: 'MontS'),),
+                          //   ),
+                          ],
+                        ),    
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(top: 23),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            InkWell(
+                              onTap: () {
+                                Navigator.push(context, MaterialPageRoute(builder: ((context) => ReservationsDetail())));
+                              },
+                              child: Container(
+                                height: 35,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                  color: Color(0xff0F9E2D),
+                                  borderRadius: BorderRadius.circular(30)
+                                ),
+                                child: Center(child: Text('Check',style: TextStyle(fontSize: 15,color: Colors.white,fontFamily: 'Montb'),)),
+                            
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-            ],
+                      ],
+                    ),
+                  ),
+                
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
